@@ -1,0 +1,26 @@
+<odoo>
+  <data>
+    
+    <record model="ir.ui.view" id="view_inherit_account_check_tree">
+      <field name="name">account.check.tree.inherit</field>
+      <field name="model">account.check</field>
+      <field name="inherit_id" ref="account_check.view_account_check_tree"/>
+      <field name="arch" type="xml">
+      
+        <xpath expr="//tree" position="attributes">
+          <attribute name="default_order">payment_date asc</attribute>
+        </xpath>
+
+        <xpath expr="//field[@name='payment_date']" position="after">
+          <field name="dias_restantes"/>
+        </xpath>
+
+        <xpath expr="//field[@name='payment_date']" position="attributes">
+          <attributes name="invisible">1</attributes>
+        </xpath>
+        
+      </field>
+  </record>
+
+  </data>
+</odoo>
