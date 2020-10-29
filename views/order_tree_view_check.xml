@@ -11,6 +11,22 @@
           <attribute name="default_order">payment_date asc</attribute>
         </xpath>
 
+        <xpath expr="//tree" position="attributes">
+          <attribute name="decoration-danger">dias_restantes&lt;0</attribute>
+        </xpath>
+
+        <xpath expr="//tree" position="attributes">
+          <attribute name="decoration-warning">dias_restantes&lt;5</attribute>
+        </xpath>
+
+        <xpath expr="//tree" position="attributes">
+          <attribute name="decoration-success">dias_restantes&gt;5</attribute>
+        </xpath>
+
+        <xpath expr="//tree" position="attributes">
+          <attribute name="decoration-bf">dias_restantes&lt;5</attribute>
+        </xpath>
+
         <xpath expr="//field[@name='payment_date']" position="after">
           <field name="dias_restantes"/>
         </xpath>
@@ -18,7 +34,19 @@
         <xpath expr="//field[@name='payment_date']" position="attributes">
           <attributes name="invisible">1</attributes>
         </xpath>
+		
+        <xpath expr="//field[@name='state']" position="attributes">
+          <attribute name="invisible">1</attribute>
+        </xpath>
         
+        <xpath expr="//field[@name='partner_id']" position="attributes">
+          <attribute name="invisible">1</attribute>
+        </xpath>
+        
+        <xpath expr="//field[@name='checkbook_id']" position="attributes">
+          <attribute name="invisible">1</attribute>
+        </xpath>
+
       </field>
   </record>
 

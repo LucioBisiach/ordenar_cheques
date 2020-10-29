@@ -23,6 +23,9 @@
 
     # always loaded
     'data': [
+
+        'data/ir_cron.xml',
+
         'views/order_tree_view_check.xml',
     ],
     # only loaded in demonstration mode

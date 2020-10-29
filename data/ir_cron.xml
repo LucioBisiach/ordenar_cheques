@@ -8,7 +8,7 @@
             <field name="user_id" ref="base.user_root"/>
             <field name="state">code</field>
             <field name="code">model._get_dias_restantes()</field>
-            <field name="interval_number">12s</field>
+            <field name="interval_number">12</field>
             <field name="interval_type">hours</field>
             <field name="numbercall">-1</field>
         </record>
